@@ -1,0 +1,263 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 15px;
+  background: linear-gradient(135deg, #dbeafe, #ede9fe);
+}
+
+.color-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px 32px;
+  background: #ffffff;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(31, 41, 55, 0.15);
+}
+
+.color-card h1 {
+  font-size: 32px;
+  color: #172554;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.color-card > p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.color-info {
+  width: 100%;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 18px;
+  padding: 25px 20px;
+  margin-bottom: 25px;
+}
+
+.color-info h3 {
+  font-size: 13px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.color-preview {
+  width: 100%;
+  height: 75px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.color-info p {
+  color: #312e81;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 11px;
+  padding: 13px 18px;
+  transition: all 0.25s ease;
+}
+
+.copy-btn {
+  background: #312e81;
+  color: #ffffff;
+  padding: 13px 25px;
+}
+
+.copy-btn:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+.section-title {
+  color: #334155;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 23px;
+}
+
+.buttons button {
+  width: 100%;
+  color: white;
+  padding: 15px;
+}
+
+.buttons button:nth-child(1) {
+  background: #ef4444;
+}
+
+.buttons button:nth-child(2) {
+  background: #3b82f6;
+}
+
+.buttons button:nth-child(3) {
+  background: #16a34a;
+}
+
+.buttons button:nth-child(4) {
+  background: #eab308;
+  color: #172554;
+}
+
+.buttons button:hover {
+  transform: translateY(-3px);
+  filter: brightness(0.92);
+}
+
+.random-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #6366f1, #9333ea);
+  color: #ffffff;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.random-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 480px) {
+  .color-card {
+    padding: 30px 20px;
+  }
+
+  .color-card h1 {
+    font-size: 27px;
+  }
+
+  .color-info p {
+    font-size: 25px;
+  }
+}
+
+.custom-color {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.custom-color label {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.custom-color input {
+  width: 55px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.recent-colors {
+  margin-top: 22px;
+  text-align: left;
+}
+
+.recent-colors h3 {
+  color: #334155;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.recent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.recent-color {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 3px solid #ffffff;
+  outline: 1px solid #cbd5e1;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.recent-color:hover {
+  transform: scale(1.12);
+}
+
+.extra-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.extra-actions button {
+  flex: 1;
+  font-size: 12px;
+  padding: 13px 8px;
+}
+
+.reset-btn {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.reset-btn:hover {
+  background: #c7d2fe;
+}
+
+.clear-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.clear-btn:hover:not(:disabled) {
+  background: #fecaca;
+}
+
+.clear-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 380px) {
+  .extra-actions {
+    flex-direction: column;
+  }
+}
